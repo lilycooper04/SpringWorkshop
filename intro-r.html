@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -428,7 +427,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -490,6 +488,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -530,8 +529,8 @@ summary {
 <div class="instructions">
 
 </div>
-<div id="getting-started" class="section level2">
-<h2>Getting Started</h2>
+<div id="yeehaw-weve-started" class="section level2">
+<h2>Yeehaw we’ve started!</h2>
 <p>If you have not ever used GitHub, you will first need to go in and create an account. Look at the guidlines on Jenny Bryant’s Happy Git with R website: <a href="https://happygitwithr.com/github-acct.html" class="uri">https://happygitwithr.com/github-acct.html</a></p>
 <p>Create your git account and make sure you write down your username and password.</p>
 <p>Now in github.com, search for the repository here: <a href="https://github.com/joan-combs-durso/SpringWorkshop" class="uri">https://github.com/joan-combs-durso/SpringWorkshop</a> and havd it ready. It’s okay to go ahead and double click on the HTML file called intro-r.html and follow along.</p>
@@ -594,7 +593,7 @@ You’ll have to confirm the request in email.</p>
 <p>Type the following lines of code in the console in RStudio filling in your name and email address.</p>
 <p>The email address is the one tied to your GitHub account.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(usethis)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">use_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;GitHub username&quot;</span>, <span class="dt">user.email=</span><span class="st">&quot;your email&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">use_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;lilycooper04&quot;</span>, <span class="dt">user.email=</span><span class="st">&quot;lily.cooper@duke.edu&quot;</span>)</a></code></pre></div>
 <p>For example, Joan’s would be</p>
 <p>library(usethis) use_git_config(user.name=“joan-combs-durso”, <a href="mailto:user.email=%22joan.durso@duke.edu" class="email">user.email=&quot;joan.durso@duke.edu</a>&quot;)</p>
 <p>Now your facilitators will help you get started with forking the package.</p>
@@ -680,14 +679,13 @@ You’ll have to confirm the request in email.</p>
 <p>You should see the documentation on the dataset in the Help window. Try out the other tabs there briefly.<br />
 We can access the data in a single column of a data frame separately using a command like</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">diamonds<span class="op">$</span>clarity[<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>]</a></code></pre></div>
-<pre><code>##   [1] SI2  SI1  VS1  VS2  SI2  VVS2 VVS1 SI1  VS2  VS1  SI1  VS1  SI1  SI2 
-##  [15] SI2  I1   SI2  SI1  SI1  SI1  SI2  VS2  VS1  SI1  SI1  VVS2 VS1  VS2 
-##  [29] VS2  VS1  VS1  VS1  VS1  VS1  VS1  VS1  VS1  SI1  VS2  SI2  SI2  SI1 
-##  [43] VS2  VS1  SI2  SI1  SI2  SI2  VS2  SI2  SI1  VS1  SI1  VS2  VS2  SI2 
-##  [57] SI2  SI1  SI1  SI1  VS1  SI1  SI1  SI1  SI2  VVS2 VVS1 SI1  SI1  VVS1
-##  [71] VVS1 SI1  SI1  SI1  SI1  VVS2 VVS2 VVS2 VVS2 VVS1 VVS1 VVS1 VVS2 SI2 
-##  [85] VVS1 VVS1 VVS1 VVS1 VVS2 SI1  SI1  SI2  VS2  VS2  SI2  VS2  VS1  SI2 
-##  [99] SI1  SI1 
+<pre><code>##   [1] SI2  SI1  VS1  VS2  SI2  VVS2 VVS1 SI1  VS2  VS1  SI1  VS1  SI1  SI2  SI2 
+##  [16] I1   SI2  SI1  SI1  SI1  SI2  VS2  VS1  SI1  SI1  VVS2 VS1  VS2  VS2  VS1 
+##  [31] VS1  VS1  VS1  VS1  VS1  VS1  VS1  SI1  VS2  SI2  SI2  SI1  VS2  VS1  SI2 
+##  [46] SI1  SI2  SI2  VS2  SI2  SI1  VS1  SI1  VS2  VS2  SI2  SI2  SI1  SI1  SI1 
+##  [61] VS1  SI1  SI1  SI1  SI2  VVS2 VVS1 SI1  SI1  VVS1 VVS1 SI1  SI1  SI1  SI1 
+##  [76] VVS2 VVS2 VVS2 VVS2 VVS1 VVS1 VVS1 VVS2 SI2  VVS1 VVS1 VVS1 VVS1 VVS2 SI1 
+##  [91] SI1  SI2  VS2  VS2  SI2  VS2  VS1  SI2  SI1  SI1 
 ## Levels: I1 &lt; SI2 &lt; SI1 &lt; VS2 &lt; VS1 &lt; VVS2 &lt; VVS1 &lt; IF</code></pre>
 <p>This command will only show the value of clarity of the diamonds measured in this dataset. The dollarsign basically says “go to the data frame that comes before me, and find the variable that comes after me”. Note that it should have given you a message in the data viewer window that you have exceeded the maximum print length so it has stopped before it has shown you more than 1000 values.</p>
 <div class="question">
@@ -817,7 +815,7 @@ We can access the data in a single column of a data frame separately using a com
 <p>If you run into problems with your RStudio work, start by inspecting the console for error messages. See what it tells you. Then you can try to look up that error message. Sites like Stack Overflow <a href="https://stackoverflow.com/questions/tagged/rstudio" class="uri">https://stackoverflow.com/questions/tagged/rstudio</a> provide lots of resources and answers to questions people have already asked. You will learn R more quickly if you try to solve problems yourself. We all need help at times.</p>
 <p>If you need help with a problem in your labs, please ask your TA or your classmates. Don’t be the person who posts a question to a website like Stack Overflow for which the answers can be readily found on the internet via a simple search. Those kinds of questions will be ignored or will result in heaps of abuse. Some sites are more beginner-friendly than others. Your TAs will have some suggestions for you.</p>
 <p>Whatever you do, please don’t post your assigned questions onto paid answer-sharing services. That’s a violation of the Community Standard as well as a very poor way to learn to use R.</p>
-<p>Acknowledgements: This is derived from anm Statistics with R lab derived from an Open Intro Statistics lab.</p>
+<p>Acknowledgements: This is derived from a Statistics with R lab derived from an Open Intro Statistics lab. Thanks to Mine Cetinkaya-Rundel and Maria Tackett for all their help.</p>
 <div id="license">
 <p>This is a derivative of an <a href="https://www.openintro.org/stat/labs.php">OpenIntro</a> lab, and is released under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/">Attribution-NonCommercial-ShareAlike 3.0 United States</a> license.</p>
 </div>
